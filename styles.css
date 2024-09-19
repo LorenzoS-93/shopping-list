@@ -66,7 +66,7 @@ ul {
     background: royalblue;
     border-radius: 10px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.2);
-    width: 399.812px;
+    width: 405.812px;
     gap: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -83,7 +83,6 @@ li {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 li span {
@@ -100,5 +99,5 @@ li button {
     border: 1px solid;
     cursor: pointer;
     font-weight: bold;
-    margin-right: 16px;
+    margin-right: 20px;
 }
