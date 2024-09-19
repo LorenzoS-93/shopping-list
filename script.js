@@ -8,14 +8,17 @@ function addItem() {
     input.value = '';
     
     const listItem = document.createElement("li");
+    const box = document.createElement("div");
     const listText = document.createElement("span");
     const deleteItemBtn = document.createElement("button");
 
-    // create the DOM in the right order, li span button; 
-    listItem.appendChild(listText);
-    listItem.appendChild(deleteItemBtn);
+    // create the DOM in the right order, li span button;
+    listItem.appendChild(box); 
+    box.appendChild(listText);
+    box.appendChild(deleteItemBtn);
     
     // set the item name as the input word and the btntext to delete
+    box.setAttribute("class", "box");
     listText.textContent = item;
     deleteItemBtn.textContent = "delete";
     deleteItemBtn.setAttribute("class", "delete");
@@ -25,7 +28,7 @@ function addItem() {
 
     // remove the whole parent li node if the delete button is clicked
     deleteItemBtn.addEventListener("click", () => {
-        deleteItemBtn.parentNode.remove();
+        deleteItemBtn.parentNode.parentNode.remove();
     });
 
     // keep the form focused
